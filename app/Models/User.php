@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -44,6 +45,16 @@ class User extends Authenticatable
 
     public function notes()
     {
-        return $this->hasMany('App\Models\Note', 'user_id');
+        return $this->hasMany(Note::class, 'user_id');
+    }
+
+    public function getFullNameAttribute()
+    {
+        return "$this->first_name $this->last_name";
+    }
+
+    public function setUsernameAttribute($value)
+    {
+        $this->attributes['username'] = Str::slug($value);
     }
 }
