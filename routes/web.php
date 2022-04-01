@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,7 @@ Route::prefix('/user')->name('user.')->middleware(['checkadmin'])->group(functio
 });
 
 Route::resource('/note', 'NoteController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
