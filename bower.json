@@ -1,0 +1,20 @@
+{
+  "name": "laravel-quicktask",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Nguyen Ngoc Cong <ngoccong.nncpro@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nncpro/laravel-quicktask",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "demo-lightdashboard-nnc": "https://github.com/nncpro/light_dashboard.git"
+  }
+}
