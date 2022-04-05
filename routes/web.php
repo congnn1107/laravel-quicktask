@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::prefix('/user')->name('user.')->middleware(['checkadmin'])->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('index');
@@ -34,6 +31,6 @@ Route::resource('/note', 'NoteController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 // locale
 Route::get('/change-lang/{lang}', 'LocaleController@changeLang')->name('change-lang');

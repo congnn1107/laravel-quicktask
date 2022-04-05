@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +19,8 @@ class NoteController extends Controller
     public function index()
     {
         //
+
+        return view('pages.note.index',['notes' => []]);
     }
 
     /**
@@ -25,6 +31,8 @@ class NoteController extends Controller
     public function create()
     {
         //
+
+        return view('pages.note.create');
     }
 
     /**
@@ -47,6 +55,8 @@ class NoteController extends Controller
     public function show(Note $note)
     {
         //
+
+        return view('pages.note.show');
     }
 
     /**
@@ -58,6 +68,8 @@ class NoteController extends Controller
     public function edit(Note $note)
     {
         //
+        
+        return view('pages.note.edit');
     }
 
     /**

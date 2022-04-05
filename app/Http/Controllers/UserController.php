@@ -15,6 +15,8 @@ class UserController extends Controller
     public function index()
     {
         //
+        
+        return view('pages.user.index',['users' => []]);
     }
 
     /**
@@ -25,6 +27,8 @@ class UserController extends Controller
     public function create()
     {
         //
+
+        return view('pages.user.create');
     }
 
     /**
@@ -47,6 +51,8 @@ class UserController extends Controller
     public function show(User $user)
     {
         //
+
+        return view('pages.user.show');
     }
 
     /**
@@ -58,6 +64,8 @@ class UserController extends Controller
     public function edit(User $user)
     {
         //
+
+        return view('pages.user.edit');
     }
 
     /**
