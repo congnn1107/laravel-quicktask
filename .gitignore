@@ -24,3 +24,7 @@ Homestead.json
 
 #bower
 public/bower_components
+
+#mix
+public/css
+public/js

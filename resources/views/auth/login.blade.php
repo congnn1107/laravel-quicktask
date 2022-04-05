@@ -41,13 +41,21 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('authview.remember') }}
-                                    </label>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group form-check">
+                                                <label class="form-check-label" for="remember">
+                                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                                    <span class="form-check-sign"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td><label for="remember" class="form-check-label">{{ __('authview.remember') }}</label></td>
+                                    </tr>
+                                </table>
+                               
+                                
                             </div>
                         </div>
 
@@ -58,7 +66,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link no-border pull-right" href="{{ route('password.request') }}">
                                         {{ __('authview.forgot') }}
                                     </a>
                                 @endif
