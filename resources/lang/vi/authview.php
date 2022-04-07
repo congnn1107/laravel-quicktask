@@ -3,8 +3,8 @@
 return [
     'firstname' => 'Tên',
     'lastname' => 'Họ Đệm',
-    'username' => 'Tên Đăng Nhập',
-    'email' => 'Địa chỉ E-Mail',
+    'username' => 'Tên Người Dùng',
+    'email' => 'Địa Chỉ E-Mail',
     'password' => 'Mật Khẩu',
     'confirm-password' => 'Nhập Lại Mật Khẩu',
     'register' => 'Đăng Ký',

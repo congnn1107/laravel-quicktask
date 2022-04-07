@@ -9,7 +9,7 @@
                         <h1 class="h4 text-success card-title">{{ __('pages.user_list') }}</h1>
                     </div>
                     <div class="card-body table-full-width table-responsive">
-
+                        @include('layouts.message')
                         <a href="{{ route('user.create') }}" class="btn btn-primary btn-sm pull-right"><i
                                 class="fa fa-plus"></i> {{ __('pages.create_new_user') }}</a>
 
@@ -42,15 +42,18 @@
                                                 class="btn no-border text-primary"
                                                 title="{{ __('pages.user-tooltips.edit') }}"><i
                                                     class="fa fa-pencil"></i></a>
-                                            <a href="#" class="btn no-border text-danger"
-                                                title="{{ __('pages.user-tooltips.delete') }}"
-                                                onclick="event.preventDefault;document.getElementById('delete-{{ $user->id }}').submit()"><i
-                                                    class="fa fa-trash"></i></a>
-                                            <form class="" id="delete-{{ $user->id }}"
-                                                action="{{ route('user.destroy', $user->id) }}" method="post">
-                                                @csrf
-                                                @method('delete')
-                                            </form>
+                                            @if (Auth::user()->is_admin && !$user->is_admin)
+                                                <a href="#" class="btn no-border text-danger"
+                                                    title="{{ __('pages.user-tooltips.delete') }}"
+                                                    onclick="event.preventDefault;document.getElementById('delete-{{ $user->id }}').submit()"><i
+                                                        class="fa fa-trash"></i></a>
+                                                <form class="" id="delete-{{ $user->id }}"
+                                                    action="{{ route('user.destroy', $user->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                </form>
+                                            @endif
+
                                         </td>
                                     </tr>
                                 @endforeach
