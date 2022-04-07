@@ -96,14 +96,14 @@ return [
     'password' => 'Mật khẩu không chính xác.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'Định dạng :attribute không hợp lệ.',
-    'required' => ':attribute bắt buộc phải nhập.',
+    'required' => ':Attribute bắt buộc phải nhập.',
     'required_if' => ':attribute bắt buộc phải nhập nếu :other là :value.',
     'required_unless' => ':attribute bắt buộc phải nhập trừ khi :other là :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
     'required_with_all' => 'The :attribute field is required when :values are present.',
     'required_without' => 'The :attribute field is required when :values is not present.',
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
-    'same' => ':attribute và :other phải giống nhau.',
+    'same' => ':Attribute và :other phải giống nhau.',
     'size' => [
         'numeric' => ':attribute phải :size.',
         'file' => ':attribute phải :size kilobytes.',
@@ -113,7 +113,7 @@ return [
     'starts_with' => ':attribute phải bắt đầu với: :values.',
     'string' => ':attribute phải là 1 chuỗi ký tự.',
     'timezone' => ':attribute phải là 1 time zone hợp lệ.',
-    'unique' => ':attribute đã được sử dụng, vui lòng chọn :attribute khác.',
+    'unique' => ':Attribute đã được sử dụng, vui lòng chọn :attribute khác.',
     'uploaded' => ':attribute upload không thành công.',
     'url' => ':attribute không hợp lệ.',
     'uuid' => ':attribute không hợp lệ.',
@@ -151,7 +151,8 @@ return [
         'password' => 'mật khẩu',
         'first_name' => 'tên',
         'last_name' => 'họ đệm',
-        'username' => 'tên người dùng'
+        'username' => 'tên người dùng',
+        'password_confirm' => 'xác nhận'
     ],
 
 ];

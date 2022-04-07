@@ -11,12 +11,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="{{ route('user.index') }}" class="nav-link">{{ __('pages.user_management') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('note.index') }}" class="nav-link">{{ __('pages.note_management') }}</a>
-                </li>
+                @auth
+                    @if (Auth::user()->is_admin)
+                        <li class="nav-item">
+                            <a href="{{ route('user.index') }}"
+                                class="nav-link">{{ __('pages.user_management') }}</a>
+                        </li>
+                    @endif
+                    <li class="nav-item">
+                        <a href="{{ route('note.index') }}" class="nav-link">{{ __('pages.note_management') }}</a>
+                    </li>
+                @endauth
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -45,16 +50,16 @@
 
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <span class="dropdown-item">{{ Auth::user()->full_name }}</span>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                                                         document.getElementById('logout-form').submit();">
                                 {{ __('authview.logout') }}
                             </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
                         </div>
                     </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 @endguest
             </ul>
         </div>

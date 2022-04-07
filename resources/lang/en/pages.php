@@ -25,6 +25,12 @@ return [
     'role' => 'Role',
     'options' => 'Options',
     'info' => 'Information',
+    'create_user_success' => 'Create user successfully',
+    'update_user_success' => 'Update user successfully',
+    'create_note_success' => 'Create note successfully',
+    'update_note_success' => 'Update note successfully',
+    'has_error' => 'There are some errors',
+    'home_list' => "Other user's notes",
     'placeholders' =>[
         'first_name' => 'Enter first name, max 256 characters',
         'last_name' => 'Enter last name, max 256 characters',

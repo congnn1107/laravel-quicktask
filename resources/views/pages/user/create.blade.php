@@ -13,28 +13,28 @@
                             @csrf
                             <div class="form-group @error('first_name') is-invalid @enderror">
                                 <label for="">{{ __('authview.firstname') }}</label>
-                                <input type="text" name="first_name" id="first_name" class="form-control">
+                                <input type="text" name="first_name" id="first_name" class="form-control" value="{{ old('first_name') }}">
                                 @error('first_name')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group @error('last_name') is-invalid @enderror">
                                 <label for="">{{ __('authview.lastname') }}</label>
-                                <input type="text" name="last_name" id="last_name" class="form-control">
+                                <input type="text" name="last_name" id="last_name" class="form-control" value="{{ old('last_name') }}">
                                 @error('last_name')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group @error('email') is-invalid @enderror">
                                 <label for="">{{ __('authview.email') }}</label>
-                                <input type="text" name="email" id="email" class="form-control">
+                                <input type="text" name="email" id="email" class="form-control" value="{{ old('email') }}">
                                 @error('email')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="form-group @error('username') is-invalid @enderror">
                                 <label for="">{{ __('authview.username') }}</label>
-                                <input type="text" name="username" id="username" class="form-control">
+                                <input type="text" name="username" id="username" class="form-control" value="{{ old('username') }}">
                                 @error('username')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -43,7 +43,7 @@
                                 <div class="col">
                                     <div class="form-group @error('password') is-invalid @enderror">
                                         <label for="">{{ __('authview.password') }}</label>
-                                        <input type="text" name="password" id="password" class="form-control">
+                                        <input type="text" name="password" id="password" class="form-control" value="{{ old('password') }}">
                                         @error('password')
                                             <p class="text-danger">{{ $message }}</p>
                                         @enderror

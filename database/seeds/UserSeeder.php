@@ -16,11 +16,11 @@ class UserSeeder extends Seeder
     {
         //create first admin
         $user = User::create([
-            "first_name" => "Công",
-            "last_name" => "Nguyễn Ngọc",
-            "email" => "congnn@gmail.com",
-            "username" => "nguyenngoccong",
-            "password" => Hash::make("123456"),
+            'first_name' => 'Công',
+            'last_name' => 'Nguyễn Ngọc',
+            'email' => 'admin@gmail.com',
+            'username' => 'nguyen-ngoc-cong',
+            'password' => '12345678',
         ]);
         $user->is_admin = 1;
         $user->save();

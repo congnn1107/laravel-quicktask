@@ -25,6 +25,12 @@ return [
     'role' => 'Vai trò',
     'options' => 'Tùy chọn',
     'info' => 'Thông tin chi tiết',
+    'create_user_success' => 'Thêm user thành công',
+    'update_user_success' => 'Cập nhật user thành công',
+    'create_note_success' => 'Thêm note thành công',
+    'update_note_success' => 'Cập nhật note thành công',
+    'has_error' => 'Có lỗi xảy ra',
+    'home_list' => "Danh sách note của user khác",
     'placeholders' =>[
         'first_name' => 'Nhập tên, tối đa 256 ký tự',
         'last_name' => 'Nhập họ đệm, tối đa 256 ký tự',
